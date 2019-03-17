@@ -25,3 +25,7 @@ Question.create(body: 'Question3?', test_id: 3)
 Answer.create(body: 'yes', correct: true, question_id: 1)
 Answer.create(body: 'no', question_id: 1)
 Answer.create(body: 'maybe', question_id: 1)
+
+UserTest.create(user_id: 1, test_id: 1)
+UserTest.create(user_id: 1, test_id: 2)
+UserTest.create(user_id: 1, test_id: 3)
