@@ -9,3 +9,5 @@ class AddDefault < ActiveRecord::Migration[5.2]
     change_column_default(:answers, :correct, nil)
   end
 end
+
+# change_column_default :tests, :level, from: 0, to: false
