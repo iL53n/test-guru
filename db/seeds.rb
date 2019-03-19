@@ -11,4 +11,3 @@ categories = Category.create([{title: 'web development'}, {title: 'software deve
 tests = Test.create([{title: 'Ruby', level: 2, category_id: categories[0].id}, {title: 'Rails', level: 3, category_id: categories[0].id}, {title: 'Swift', level: 1, category_id: categories[1].id}])
 questions = Question.create([{body: 'Question1?', test_id: tests[0].id}, {body: 'Question2?', test_id: tests[1].id}, {body: 'Question3?', test_id: tests[2].id}])
 answers = Answer.create([{body: 'yes', correct: true, question_id: questions[0].id}, {body: 'no', question_id: questions[0].id}, {body: 'maybe', question_id: questions[0].id}])
-user_tests = UserTest.create([{user_id: users[0].id, test_id: tests[0].id}, {user_id: users[0].id, test_id: tests[1].id}, {user_id: users[0].id, test_id: tests[2].id}])
