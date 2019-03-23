@@ -12,10 +12,10 @@ class Answer < ApplicationRecord
   private
 
   def validate_answers_to_question
-    errors.add(:question, 'can not have more than 4 answers') if question_answers.count >= MAX_ANSWERS
+    errors.add(:question, 'can not have more than 4 answers') if question.answers.count >= MAX_ANSWERS
   end
 
-  def question_answers #если возвращает nil, то 'NoMethodError (undefined method `answers' for nil:NilClass)'
-    question.answers
-  end
+  # def question_answers
+  #   question.answers
+  # end
 end
