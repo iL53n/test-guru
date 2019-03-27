@@ -43,7 +43,7 @@ class QuestionsController < ApplicationController
   end
 
   def rescue_with_question_not_found
-    render plain: 'Question was not found'
+    render plain: 'Question was not found', status: 404
   end
 
   def question_params
