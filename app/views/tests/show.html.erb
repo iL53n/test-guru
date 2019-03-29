@@ -1,13 +1,18 @@
 <p>
   <strong>Title:</strong>
-  <%= test.title %>
+  <%= @test.title %>
 </p>
 
 <p>
   <strong>Level:</strong>
-  <%= test.level %>
+  <%= @test.level %>
 </p>
 
-<!--questions-->
+<p>
+  <strong>Category:</strong>
+  <%= @test.category.title %>
+</p>
+
+<!--render @questions-->
 
 <%= link_to 'Back', tests_path %>

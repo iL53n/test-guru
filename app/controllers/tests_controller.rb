@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
 
-  before_action :find_test, only: %i[edit show update destroy]
+  before_action :find_test, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -23,15 +23,16 @@ class TestsController < ApplicationController
   end
 
   def show
-    #empty
+    # empty
+    # @questions = @test.questions
   end
 
   def edit
-    #empty
+    # empty
   end
 
   def update
-    if @test.save
+    if @test.update(test_params)
       redirect_to @test
     else
       render :edit
@@ -41,7 +42,7 @@ class TestsController < ApplicationController
 
   def destroy
     @test.destroy
-    render plain: "You destroy the test"
+    redirect_to tests_path
   end
 
   private
@@ -55,7 +56,7 @@ class TestsController < ApplicationController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 end
 
