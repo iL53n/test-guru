@@ -23,8 +23,7 @@ class TestsController < ApplicationController
   end
 
   def show
-    # empty
-    # @questions = @test.questions
+    @questions = @test.questions
   end
 
   def edit
