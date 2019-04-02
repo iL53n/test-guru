@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def github_url(author, repo)
-    repo == '' ? name = author : name = repo
+    name = repo.blank? ? author : repo
 
     link_to name,
             "https://github.com/#{author}/#{repo}",
