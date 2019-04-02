@@ -6,7 +6,6 @@
   </p>
 
   <p>
-    <%= form.label :test %><br>
     <%= form.collection_select :test_id, Test.all, :id, :title, prompt: true %>
   </p>
 

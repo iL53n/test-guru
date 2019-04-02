@@ -35,7 +35,7 @@ class AnswersController < ApplicationController
 
   def destroy
     @answer.destroy
-    redirect_to question_path(@answer.question)
+    redirect_to @answer.question
   end
 
   private
@@ -53,6 +53,6 @@ class AnswersController < ApplicationController
   end
 
   def answer_params
-    params.require(:answer).permit(:body)
+    params.require(:answer).permit(:body, :correct)
   end
 end

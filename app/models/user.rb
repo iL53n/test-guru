@@ -1,8 +1,7 @@
 class User < ApplicationRecord
 
-  #has_and_belongs_to_many :tests
-  has_many :tests_users
-  has_many :tests, through: :tests_users
+  has_many :test_passages
+  has_many :tests, trought: :tests_passages
 
   validates :email, presence: true
 

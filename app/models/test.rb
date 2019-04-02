@@ -1,14 +1,14 @@
 class Test < ApplicationRecord
   has_many :questions
   belongs_to :category
-  has_many :tests_users
-  has_many :users, through: :tests_users
+  has_many :test_passages
+  has_many :users, trought: :tests_passages
   belongs_to :author, class_name: 'User', optional: true
 
   validates :title, presence: true
   validates :title, uniqueness: { scope: :level }
   validates :level, numericality: { greater_than: 0,
-                                    only_integer: true } # я думаю пригодится, чтобы могло быть только целочисленным
+                                    only_integer: true }
 
   scope :tests_by_category, -> (category) { joins(:category).where(categories: { title: category }) }
   scope :easy, -> { where(level: 0..1) }
