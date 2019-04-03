@@ -1,14 +1,14 @@
-<p>
-  <strong>Body:</strong>
+<h1>
+  Question:
   <%= @question.body %>
-</p>
+</h1>
 
-<p>
-  <strong>Test:</strong>
+<h3>
+  Test:
   <%= @question.test.title %>
-</p>
+</h3>
 
-<h2>Answers</h2>
+<h3>Answers</h3>
 <%= link_to 'New answer', new_question_answer_path(@question) %>
 
 <ol>
