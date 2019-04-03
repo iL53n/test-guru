@@ -7,7 +7,7 @@ class Test < ApplicationRecord
 
   validates :title, presence: true
   validates :title, uniqueness: { scope: :level }
-  validates :level, numericality: { greater_than: 0,
+  validates :level, numericality: { greater_than_or_equal_to: 0,
                                     only_integer: true }
 
   scope :tests_by_category, -> (category) { joins(:category).where(categories: { title: category }) }

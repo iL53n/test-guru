@@ -1,6 +1,6 @@
 class Answer < ApplicationRecord
 
-  MAX_ANSWERS = (1..4).freeze
+  MAX_ANSWERS = 4
 
   belongs_to :question
 

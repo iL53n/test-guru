@@ -1,4 +1,5 @@
-<%= form_with model: [@question, @answer] do |form| %>
+<%= form_with model: [@question, @answer], local: true do |form| %>
+  <%= render 'layouts/errors', resource: @answer %>
 
   <p>
     <%= form.label :body %><br>
