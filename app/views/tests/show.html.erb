@@ -22,5 +22,5 @@
   <%= link_to 'New question', new_test_question_path(@test) %>
   <%= render @questions, test: @test %>
 </table>
-
+<%= 'NO QUESTIONS' if @test.questions.blank? %><br>
 <%= link_to 'Back', tests_path %>
