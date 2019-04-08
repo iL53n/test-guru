@@ -12,9 +12,8 @@
   <body>
     <h1><%= link_to  'TestGuru', root_path %></h1>
 
-    <% if flash[:notice] %>
-      <%= content_tag :p, flash[:notice], class: 'flash' %>
-    <% end %>
+    <%= flash_message(:alert) %>
+    <%= flash_message(:notice) %>
 
     <p class="nav user">
       <% if logged_in? %>
