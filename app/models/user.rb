@@ -8,6 +8,10 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  validates :login, presence: true
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i },
+                    uniqueness: true
+
   scope :tests_by_level, -> (level) { tests.where(level: level) }
 
   def test_passage(test)
