@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      session[:url].present? ? (redirect_to session[:url]) : (redirect_to root_path)
+      # не работает redirect
+      # session[:url].present? ? (redirect_to session[:url]) : (redirect_to root_path)
     else
       render :new
     end
