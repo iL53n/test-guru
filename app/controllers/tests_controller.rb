@@ -57,8 +57,7 @@ class TestsController < ApplicationController
   end
 
   def set_user
-    @user = User.first
-    # @user = User.find(params[:id])
+    @user = current_user
   end
 
   def rescue_with_test_not_found

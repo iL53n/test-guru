@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path
+      session[:url].present? ? (redirect_to session[:url]) : (redirect_to root_path)
     else
       render :new
     end
@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    session[:url] = nil
     redirect_to root_path, noice: 'LogOut completed!'
   end
 end
