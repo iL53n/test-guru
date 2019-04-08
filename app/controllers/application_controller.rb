@@ -6,8 +6,10 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
+      session[:url] = request.fullpath
       redirect_to login_path, alert: 'Login required!' # flash[:alert] = 'Login required!'
     end
+
   end
 
   def current_user

@@ -7,9 +7,8 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path, notice: 'LogIn completed!'
-      # не работает redirect
-      # session[:url].present? ? (redirect_to session[:url]) : (redirect_to root_path)
+      redirect_to session[:url] || root_path
+      flash[:notice] = 'LogIn completed!'
     else
       flash.now[:alert] = 'Entered incorrect login or password!'
       render :new
