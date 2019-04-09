@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to session[:url] || root_path
+      redirect_to session[:redirect_url] || root_path
       flash[:notice] = 'LogIn completed!'
     else
       flash.now[:alert] = 'Entered incorrect login or password!'
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    session[:url] = nil
+    session[:redirect_url] = nil
     redirect_to login_path, notice: 'LogOut completed!'
   end
 end
