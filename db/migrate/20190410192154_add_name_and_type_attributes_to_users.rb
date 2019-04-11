@@ -4,5 +4,6 @@ class AddNameAndTypeAttributesToUsers < ActiveRecord::Migration[5.2]
     add_column :users, :first_name, :string
     add_column :users, :last_name, :string
     add_index :users, :type
+    change_column_null(:users, :login, true)
   end
 end
