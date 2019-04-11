@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel | TestGuru</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<h1><%= link_to  'TestGuru', root_path %></h1>
+<%= render 'shared/flash' %>
+
+<%= render 'admin/nav' %>
+
+<hr>
+<%= yield %><br>
+<%= render 'shared/footer' %>
+</body>
+</html>
