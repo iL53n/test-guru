@@ -10,7 +10,7 @@ module ApplicationHelper
             "https://github.com/#{author}/#{repo}",
             target: '_blank'
   end
-
+  
   def flash_message(name)
     if flash[name]
       content_tag :p, flash[name], class: "flash #{name}"
