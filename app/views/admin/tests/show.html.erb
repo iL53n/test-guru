@@ -1,0 +1,27 @@
+<h1>
+  Test:
+  <%= @test.title %>
+</h1>
+
+<h3>
+  Level:
+  <%= @test.level %>
+</h3>
+
+<h3>
+  Category:
+  <%= @test.category.title %>
+</h3>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th>Test</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  <%= link_to 'New question', new_admin_test_question_path(@test) %>
+  <%= render @questions, test: @test %>
+  <%#= render partial: 'questions/question', collection: @test.questions %>
+</table>
+<%= 'NO QUESTIONS' if @test.questions.blank? %><br>
+<%= link_to 'Back', admin_tests_path %>

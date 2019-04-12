@@ -10,6 +10,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <h1><%= link_to  'TestGuru', root_path %></h1>
+    <%= render 'shared/flash' %>
+
+    <p class="nav user">
+    <% if user_signed_in? %>
+      Welcome, <b><%= current_user.first_name %></b> Guru!<br>
+      <%= link_to 'LogOut', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'AddAccount', new_user_registration_path %><br>
+      <%= link_to 'LogIn', new_user_session_path %><br>
+    <% end %>
+    </p>
+
+    <hr>
+    <%= yield %><br>
+    <%= render 'shared/footer' %>
   </body>
 </html>
