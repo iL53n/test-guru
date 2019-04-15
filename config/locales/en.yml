@@ -30,4 +30,43 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    select:
+      prompt: "Please select"
+
+  tests:
+    index:
+      header: "Tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      question: "Questions"
+      action: "Actions"
+      new: "New test"
+  actions:
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Are you sure?"
+  admin:
+    tests:
+      index:
+        header: "Tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        question: "Questions"
+        action: "Actions"
+        new: "New test"
+      create: "Add new test! Author: %{author_first_name} %{author_last_name}"
+      update: "Update test!"
+      delete: "Delete test!"
