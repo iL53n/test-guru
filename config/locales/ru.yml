@@ -62,6 +62,11 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} завершен!"
+      success: "ТЕСТ СДАН"
+      failure: "ТЕСТ НЕ СДАН"
+      result: "Результат: %{result}%"
+    show:
+      header: "Прохождение теста: %{title}"
 
   tests_mailer:
     completed_test:

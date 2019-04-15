@@ -60,6 +60,11 @@ en:
   test_passages:
     result:
       header: "Test %{title} was completed!"
+      success: "SUCCESS"
+      failure: "FAILURE"
+      result: "Result: %{result}%"
+    show:
+      header: "Passing the %{title} Test"
 
   tests_mailer:
     completed_test:
