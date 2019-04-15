@@ -12,6 +12,14 @@ ru:
     select:
       prompt: "Сделайте выбор"
 
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
   tests:
     index:
       header: "Тесты"
@@ -21,11 +29,17 @@ ru:
       question: "Вопросы"
       actions: "Действия"
       new: "Новый тест"
+    test:
+      start: "Начать"
+
   actions:
     show: "Показать"
     edit: "Редактировать"
     delete: "Удалить"
     confirm: "Вы уверены?"
+    back: "Назад"
+    next: "Вперед"
+
   admin:
     tests:
       index:
@@ -36,6 +50,25 @@ ru:
         question: "Вопросы"
         actions: "Действия"
         new: "Новый тест"
+      show:
+        new_question: "Новый вопрос"
       create: "Создан новый тест! Автор: %{author_first_name} %{author_last_name}"
       update: "Тест изменен!"
       delete: "Тест удален!"
+    nav:
+      logout: "Выйти"
+
+
+  test_passages:
+    result:
+      header: "Тест %{title} завершен!"
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы успешно завершили тест на TestGuru!'
+
+  layouts:
+    application:
+     logout: "Выйти"
+     registration: "Регистрация"
+     login: "Войти"

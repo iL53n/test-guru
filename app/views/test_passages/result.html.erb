@@ -1,4 +1,4 @@
-<h1>The <%= @test_passage.test.title %> Test was Completed!</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <% if @test_passage.success? %>
   <h2 style="color: green">SUCCESS</h2>
@@ -8,6 +8,6 @@
 
 <h3>Result: <%= @test_passage.percentage %> %</h3>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to t('actions.back'), tests_path %>
 
 
