@@ -13,7 +13,7 @@ module TestGuru
 
     # Добавьте в конфигурацию Rails приложения своё местоположение: часовой пояс и язык.
     config.time_zone = 'Minsk'
-    config.i18n.default_locale = :en # в /locales пока других нет
+    config.i18n.default_locale = :ru
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

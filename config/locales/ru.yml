@@ -1,0 +1,79 @@
+ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Наименование"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Сделайте выбор"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: "Тесты"
+      title: "Наименование"
+      level: "Уровень"
+      category: "Категория"
+      question: "Вопросы"
+      actions: "Действия"
+      new: "Новый тест"
+    test:
+      start: "Начать"
+
+  actions:
+    show: "Показать"
+    edit: "Редактировать"
+    delete: "Удалить"
+    confirm: "Вы уверены?"
+    back: "Назад"
+    next: "Вперед"
+
+  admin:
+    tests:
+      index:
+        header: "Тесты"
+        title: "Наименование"
+        level: "Уровень"
+        category: "Категория"
+        question: "Вопросы"
+        actions: "Действия"
+        new: "Новый тест"
+      show:
+        new_question: "Новый вопрос"
+      create: "Создан новый тест! Автор: %{author_first_name} %{author_last_name}"
+      update: "Тест изменен!"
+      delete: "Тест удален!"
+    nav:
+      logout: "Выйти"
+
+
+  test_passages:
+    result:
+      header: "Тест %{title} завершен!"
+      success: "ТЕСТ СДАН"
+      failure: "ТЕСТ НЕ СДАН"
+      result: "Результат: %{result}%"
+    show:
+      header: "Прохождение теста: %{title}"
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы успешно завершили тест на TestGuru!'
+
+  layouts:
+    application:
+     logout: "Выйти"
+     registration: "Регистрация"
+     login: "Войти"
