@@ -70,8 +70,8 @@ en:
     completed_test:
       subject: 'You just completed the TestGuru test!'
 
-  layouts:
-    application:
-     logout: "LogOut"
-     registration: "Registration"
-     login: "LogIn"
+  shared:
+    nav:
+      logout: "LogOut"
+      registration: "Registration"
+      login: "LogIn"
