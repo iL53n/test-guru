@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Admin Panel | TestGuru</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+    <title>Admin Panel | TestGuru</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<body>
-<h1><%= link_to  'TestGuru', root_path %></h1>
-<%= render 'admin/nav' %>
-<%= render 'shared/flash' %>
-<hr>
-<%= yield %><br>
-<%= render 'shared/footer' %>
-</body>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'shared/nav' %>
+    <div class="container">
+      <%= render 'shared/flash' %>
+      <%= yield %><br>
+    </div>
+    <div class="container">
+      <%= render 'shared/footer' %>
+    </div>
+  </body>
 </html>
