@@ -74,3 +74,4 @@ en:
       logout: "LogOut"
       registration: "Registration"
       login: "LogIn"
+      admin: "AdminPanel"

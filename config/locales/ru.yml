@@ -58,7 +58,6 @@ ru:
     nav:
       logout: "Выйти"
 
-
   test_passages:
     result:
       header: "Тест %{title} завершен!"
@@ -77,3 +76,4 @@ ru:
       logout: "Выйти"
       registration: "Регистрация"
       login: "Войти"
+      admin: "Панель администратора"
