@@ -1,26 +1,24 @@
-<h1>
-  Test:
-  <%= @test.title %>
-</h1>
+<h1 class="display-4">Test: <%= @test.title %></h1>
+<p class="lead">Level: <%= @test.level %></p>
+<p class="lead">Category: <%= @test.category.title %></p>
 
-<h3>
-  Level:
-  <%= @test.level %>
-</h3>
+<p>
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-primary'  %>
+</p>
 
-<h3>
-  Category:
-  <%= @test.category.title %>
-</h3>
-
-<table>
+<table class="table table-striped">
+  <thead
   <tr>
     <th>Body</th>
     <th>Test</th>
     <th colspan="3">Actions</th>
   </tr>
-  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
+  </thead>
   <%= render @questions, test: @test %>
 </table>
-<%= 'NO QUESTIONS' if @test.questions.blank? %><br>
-<%= link_to t('actions.back'), admin_tests_path %>
+
+<% if @test.questions.blank? %>
+  <p class="alert alert-dark">NO QUESTIONS</p>
+<% end %>
+
+<%= link_to t('actions.back'), admin_tests_path, class: 'btn btn-primary' %>

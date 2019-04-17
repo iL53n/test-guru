@@ -56,7 +56,6 @@ en:
     nav:
       logout: "LogOut"
 
-
   test_passages:
     result:
       header: "Test %{title} was completed!"
