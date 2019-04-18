@@ -1,18 +1,13 @@
 <div>
   <hr>
-  <p>
-    Copyright <%= current_year %>
-  </p>
-  <p>
+  <p class="card-text"><small class="text-muted">
+    Copyright <%= current_year %><br>
     Project: <%= github_url('iL53n', 'test-guru') %>
-    by: <%= github_url('iL53n', '') %>
-  </p>
-  <p>
-    Приложение для создания тестов.
-  </p>
-  <p>
-    Учебный проект в онлайн-школе
+    by: <%= github_url('iL53n', '') %><br>
+    Application for creating tests.<br>
+    Educational project in an online school
     <%= link_to  'Thinknetica',
                  'https://thinknetica.com/', target: '_blank'%>
+    </small>
   </p>
 </div>

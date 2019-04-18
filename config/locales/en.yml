@@ -56,7 +56,6 @@ en:
     nav:
       logout: "LogOut"
 
-
   test_passages:
     result:
       header: "Test %{title} was completed!"
@@ -70,8 +69,9 @@ en:
     completed_test:
       subject: 'You just completed the TestGuru test!'
 
-  layouts:
-    application:
-     logout: "LogOut"
-     registration: "Registration"
-     login: "LogIn"
+  shared:
+    nav:
+      logout: "LogOut"
+      registration: "Registration"
+      login: "LogIn"
+      admin: "AdminPanel"

@@ -58,7 +58,6 @@ ru:
     nav:
       logout: "Выйти"
 
-
   test_passages:
     result:
       header: "Тест %{title} завершен!"
@@ -72,8 +71,9 @@ ru:
     completed_test:
       subject: 'Вы успешно завершили тест на TestGuru!'
 
-  layouts:
-    application:
-     logout: "Выйти"
-     registration: "Регистрация"
-     login: "Войти"
+  shared:
+    nav:
+      logout: "Выйти"
+      registration: "Регистрация"
+      login: "Войти"
+      admin: "Панель администратора"
