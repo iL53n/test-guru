@@ -1,4 +1,10 @@
 module ApplicationHelper
+   FLASH_KEYS = {  'alert' => :danger, 'notice' => :primary }.freeze
+
+  def flash_class(key)
+    FLASH_KEYS[key] || :secondary
+  end
+
   def current_year
     Date.today.year
   end
