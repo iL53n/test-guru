@@ -42,6 +42,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Auth
 gem 'devise', '~> 4.0'
 
+# Networking
+gem 'faraday'
+
 # Localization
 gem 'rails-i18n', '~> 5.0'
 

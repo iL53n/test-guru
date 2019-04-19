@@ -66,6 +66,10 @@ ru:
       result: "Результат: %{result}%"
     show:
       header: "Прохождение теста: %{title}"
+      savegist: "Сохранить в Gist"
+    gist:
+      success: "Вопрос успешно сохранен в Gist!"
+      failure: "Вопрос не был сохранен!"
 
   tests_mailer:
     completed_test:

@@ -64,6 +64,10 @@ en:
       result: "Result: %{result}%"
     show:
       header: "Passing the %{title} Test"
+      savegist: "Save to Gist"
+    gist:
+      success: "Question successfully saved to Gist!"
+      failure: "The question was not saved!"
 
   tests_mailer:
     completed_test:
