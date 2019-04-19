@@ -81,3 +81,5 @@ ru:
       registration: "Регистрация"
       login: "Войти"
       admin: "Панель администратора"
+
+  description: "Вопрос из теста %{title} приложения TestGuru"

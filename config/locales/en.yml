@@ -79,3 +79,6 @@ en:
       registration: "Registration"
       login: "LogIn"
       admin: "AdminPanel"
+
+
+  description: "A question about %{title} from TestGuru"
