@@ -57,6 +57,11 @@ ru:
       delete: "Тест удален!"
     nav:
       logout: "Выйти"
+    gists:
+      index:
+        question: 'Вопрос'
+        url: 'Ссылка'
+        user: 'Пользователь'
 
   test_passages:
     result:
@@ -68,6 +73,7 @@ ru:
       header: "Прохождение теста: %{title}"
       savegist: "Сохранить в Gist"
     gist:
+      header: 'Gists'
       success: "Вопрос успешно сохранен в Gist!"
       failure: "Вопрос не был сохранен!"
 

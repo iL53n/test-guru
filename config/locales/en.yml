@@ -55,6 +55,12 @@ en:
       delete: "Delete test!"
     nav:
       logout: "LogOut"
+    gists:
+      index:
+        header: 'Gists'
+        question: 'Question'
+        url: 'Url'
+        user: 'User'
 
   test_passages:
     result:
