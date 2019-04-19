@@ -59,8 +59,8 @@ en:
       index:
         header: 'Gists'
         question: 'Question'
-        url: 'Url'
-        user: 'User'
+        url: 'Gist url'
+        user: 'User email'
 
   test_passages:
     result:
