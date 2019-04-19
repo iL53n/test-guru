@@ -44,6 +44,7 @@ gem 'devise', '~> 4.0'
 
 # Networking
 gem 'faraday'
+gem 'octokit', '~> 4.0'
 
 # Localization
 gem 'rails-i18n', '~> 5.0'
