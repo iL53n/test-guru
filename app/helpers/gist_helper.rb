@@ -1,5 +1,5 @@
 module GistHelper
   def symbol_limit(text)
-    text[0..24]
+    text.truncate(25)
   end
 end
