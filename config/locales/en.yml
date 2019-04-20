@@ -55,6 +55,12 @@ en:
       delete: "Delete test!"
     nav:
       logout: "LogOut"
+    gists:
+      index:
+        header: 'Gists'
+        question: 'Question'
+        url: 'Gist url'
+        user: 'User email'
 
   test_passages:
     result:
@@ -64,6 +70,10 @@ en:
       result: "Result: %{result}%"
     show:
       header: "Passing the %{title} Test"
+      savegist: "Save to Gist"
+    gist:
+      success: "Question successfully saved to Gist! Url: %{url}"
+      failure: "The question was not saved!"
 
   tests_mailer:
     completed_test:
@@ -75,3 +85,6 @@ en:
       registration: "Registration"
       login: "LogIn"
       admin: "AdminPanel"
+
+
+  description: "A question about %{title} from TestGuru"
