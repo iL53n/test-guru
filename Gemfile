@@ -54,6 +54,9 @@ gem 'rails-i18n', '~> 5.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.3.0'
 
+# Icons
+gem 'octicons_helper'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
