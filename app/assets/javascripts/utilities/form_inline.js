@@ -30,14 +30,16 @@ function formInlineHandler(testId) {
   $formInline.toggle()
   $testTile.toggle()
 
-  // if (formInLine.classList.contains('hide')) {
-  if ($formInline.is(':visible')) {
-    // testTitle.classList.add('hide')
-    // formInLine.classList.remove('hide')
-    link.textContent = 'Cancel'
-  } else {
-    // testTitle.classList.remove('hide')
-    // formInLine.classList.add('hide')
-    link.textContent = 'Edit'
+  if (link) {
+    // if (formInLine.classList.contains('hide')) {
+    if ($formInline.is(':visible')) {
+      // testTitle.classList.add('hide')
+      // formInLine.classList.remove('hide')
+      link.textContent = 'Cancel'
+    } else {
+      // testTitle.classList.remove('hide')
+      // formInLine.classList.add('hide')
+      link.textContent = 'Edit'
+    }
   }
 }
