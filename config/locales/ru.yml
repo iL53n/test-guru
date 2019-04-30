@@ -55,6 +55,8 @@ ru:
       create: "Создан новый тест! Автор: %{author_first_name} %{author_last_name}"
       update: "Тест изменен!"
       delete: "Тест удален!"
+      form_inline:
+        submit: "OK"
     nav:
       logout: "Выйти"
     gists:
@@ -87,5 +89,7 @@ ru:
       registration: "Регистрация"
       login: "Войти"
       admin: "Панель администратора"
+    errors:
+      header: "Обнаружены ошибки(%{count})"
 
   description: "Вопрос из теста %{title} приложения TestGuru"

@@ -53,6 +53,8 @@ en:
       create: "Add new test! Author: %{author_first_name} %{author_last_name}"
       update: "Update test!"
       delete: "Delete test!"
+      form_inline:
+        submit: "OK"
     nav:
       logout: "LogOut"
     gists:
@@ -85,6 +87,8 @@ en:
       registration: "Registration"
       login: "LogIn"
       admin: "AdminPanel"
+    errors:
+      header: "Errors detected(%{count})"
 
 
   description: "A question about %{title} from TestGuru"
