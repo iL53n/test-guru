@@ -1,6 +1,6 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<%= render 'shared/progress_bar', test: @test %>
+<%= render 'shared/progress_bar', test: @test, current_question: @test_passage.current_question %>
 
 <p>
   <h3><%= @test_passage.current_question.body %></h3>

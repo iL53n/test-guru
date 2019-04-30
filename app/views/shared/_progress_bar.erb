@@ -1,6 +1,6 @@
 <div class="progress-bar">
-  <%= content_tag :div, "#{@test_passage.test_question_index}/#{@test_passage.test_questions_count}",
+  <%= content_tag :div, " - #{@test_passage.test_question_index}/#{@test_passage.test_questions_count} - ",
                   id: 'progress',
-                  data: { questions_count:@test_passage.test.questions.count,
-                          question_number: @test_passage.test_question_index} %>
+                  data: { questions_count: @test_passage.test_questions_count,
+                          question_number: @test_passage.test_question_index - 1} %>
 </div>
