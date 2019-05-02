@@ -63,7 +63,7 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "test-guru_#{Rails.env}"
-  
+
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'il53n-test-guru.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
@@ -72,7 +72,6 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       adress:               'smtp.gmail.com',
       port:                 587,
-      domain:               "il53n-test-guru.herokuapp.com",
       user_name:            ENV['SMTP_USERNAME'],
       password:             ENV['SMTP_PASSWORD'],
       authentication:       'plain',
