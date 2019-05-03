@@ -18,6 +18,11 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
 
+  feedbacks:
+    new:
+      title: "FeedBack"
+      send: "Send"
+
   tests:
     index:
       header: "Tests"

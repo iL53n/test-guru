@@ -20,6 +20,12 @@ ru:
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
 
+  feedbacks:
+    new:
+      title: "Обратная связь"
+      send: "Отправить"
+
+
   tests:
     index:
       header: "Тесты"
