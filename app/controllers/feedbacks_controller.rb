@@ -7,13 +7,19 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    @feedback = Feedback.new(feedback_params)
+    @feedback = current_user.feedback.new(feedback_params)
 
     if @feedback.save
-      redirect_to admin_answer_path(@answer), notice: 'You send feedback!'
+      redirect_to root, notice: 'You send feedback!'
     else
       render :new
     end
+  end
+
+  private
+
+  def feedback_params
+    params.require(:feedback).permit(:title, :messages, :user_id)
   end
 
 end

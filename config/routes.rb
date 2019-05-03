@@ -16,11 +16,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :feedbacks do
-    member do
-      post :new
-    end
-  end
+  resources :feedbacks, only: %i[new create]
 
   namespace :admin do
     resources :tests do
