@@ -1,7 +1,5 @@
 class FeedbacksController < ApplicationController
 
-  def show; end
-
   def new
     @feedback = Feedback.new
   end
@@ -10,7 +8,7 @@ class FeedbacksController < ApplicationController
     @feedback = current_user.feedbacks.new(feedback_params)
 
     if @feedback.save
-      TestsMailer.send_feedback(@feedback).deliver_now
+      FeedbacksMailer.send_feedback(@feedback).deliver_now
       redirect_to root_path, notice: 'You send feedback!'
     else
       render :new
@@ -20,7 +18,7 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_params
-    params.require(:feedback).permit(:title, :messages, :user_id)
+    params.require(:feedback).permit(:title, :message, :user_id)
   end
 
 end

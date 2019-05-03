@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_05_03_174031) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.string "title", null: false
-    t.string "messages", null: false
+    t.string "message", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

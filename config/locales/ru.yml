@@ -91,6 +91,7 @@ ru:
 
   shared:
     nav:
+      feedback: "Обратная связь"
       logout: "Выйти"
       registration: "Регистрация"
       login: "Войти"
