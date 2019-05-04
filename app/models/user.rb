@@ -8,11 +8,11 @@ class User < ApplicationRecord
          :validatable,
          :confirmable
 
-  has_many :test_passages
-  has_many :tests, through: :test_passages
+  has_many :test_passages, dependent: :destroy
+  has_many :tests, through: :test_passages, dependent: :destroy
   has_many :author_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
-  has_many :gists
-  has_many :feedbacks
+  has_many :gists, dependent: :destroy
+  has_many :feedbacks, dependent: :destroy
 
   # validates :login, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i },
