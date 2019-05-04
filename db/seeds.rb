@@ -11,7 +11,8 @@ categories = Category.create([{title: 'mathematics'},
                               {title: 'literature'}])
 
 tests = Test.create([{title: 'Plus', level: 1, category_id: categories[0].id},
-                     {title: 'Minus', level: 2, category_id: categories[0].id}])
+                     {title: 'Minus', level: 2, category_id: categories[0].id},
+                     {title: 'NoQuestionsTest', level: 1, category_id: categories[0].id}])
 
 questions1 = Question.create([{body: '5 + 5', test_id: tests[0].id},
                               {body: '8 + 4', test_id: tests[0].id},

@@ -37,6 +37,7 @@ ru:
       new: "Новый тест"
     test:
       start: "Начать"
+      no_questions: "Нет вопросов"
 
   actions:
     show: "Показать"
