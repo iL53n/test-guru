@@ -20,6 +20,12 @@ ru:
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
 
+  feedbacks:
+    new:
+      title: "Обратная связь"
+      send: "Отправить"
+
+
   tests:
     index:
       header: "Тесты"
@@ -31,6 +37,7 @@ ru:
       new: "Новый тест"
     test:
       start: "Начать"
+      no_questions: "Нет вопросов"
 
   actions:
     show: "Показать"
@@ -85,6 +92,7 @@ ru:
 
   shared:
     nav:
+      feedback: "Обратная связь"
       logout: "Выйти"
       registration: "Регистрация"
       login: "Войти"

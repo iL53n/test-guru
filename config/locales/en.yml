@@ -18,6 +18,11 @@ en:
         one: "%{count} error detected"
         other: "%{count} errors detected"
 
+  feedbacks:
+    new:
+      title: "FeedBack"
+      send: "Send"
+
   tests:
     index:
       header: "Tests"
@@ -29,6 +34,7 @@ en:
       new: "New test"
     test:
       start: "Start"
+      no_questions: "No questions"
 
   actions:
     show: "Show"
@@ -83,6 +89,7 @@ en:
 
   shared:
     nav:
+      feedback: "FeedBack"
       logout: "LogOut"
       registration: "Registration"
       login: "LogIn"
