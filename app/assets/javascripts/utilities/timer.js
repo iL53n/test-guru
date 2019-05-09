@@ -1,30 +1,38 @@
-document.addEventListener('turbolinks:load', function() {
-  var control = document.querySelector('.timer');
-
-  if (control) { control.addEventListener('click', timerInProgress) }
-  // if (timer) {setTimeout(timerProcess(5,30), { alert('Вы приступили к тесту! Время теста ограничено!') }, 1000)};
-});
+document.addEventListener('turbolinks:load', timerInProgress);
 
 function timerInProgress() {
-  var minutesObject = document.getElementById('minutes');
-  var secondsObject = document.getElementById('seconds');
+  var timerObject = document.getElementById('timer');
 
-  //
-  minutes = minutesObject.textContent;
-  seconds = secondsObject.textContent;
+  if (timerObject) {
+    setInterval(function() {
+      var timer = timerObject.dataset.testTimer;
+      timerObject.textContent = timer;
 
-  if (minutes === '0' && seconds === '0') {
-    alert = 'Time is out!'
-  } else {
-    if (seconds === '0') {
-      minutes -= 1;
-      seconds = 59
-    } else {
-      seconds -= 1
-    }
+      if (timer === '00:00') {
+        alert('Time is out!');
+        document.location.href += '/result';
+      } else {
+        timeRuns(timer, timerObject);
+      }
+
+    }, 1000);
   }
-  //
-
-  secondsObject.textContent = seconds
-  minutesObject.textContent = minutes
 }
+
+function timeRuns(timer, timerObject) {
+  var arr = timer.split(':');
+  var minutes = arr[0];
+  var seconds = arr[1];
+
+  if (seconds === '00') {
+    minutes -= 1;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = 59;
+  } else {
+    seconds -= 1;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+  }
+
+  timerObject.dataset.testTimer = minutes + ':' + seconds;
+}
+

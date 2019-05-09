@@ -10,9 +10,9 @@
 categories = Category.create([{title: 'mathematics'},
                               {title: 'literature'}])
 
-tests = Test.create([{title: 'Plus', level: 1, category_id: categories[0].id},
-                     {title: 'Minus', level: 2, category_id: categories[0].id},
-                     {title: 'NoQuestionsTest', level: 1, category_id: categories[0].id}])
+tests = Test.create([{title: 'Plus', level: 1, category_id: categories[0].id, time_limit: '01:00'},
+                     {title: 'Minus', level: 2, category_id: categories[0].id, time_limit: '01:00'},
+                     {title: 'NoQuestionsTest', level: 1, category_id: categories[0].id}], time_limit: '01:00')
 
 questions1 = Question.create([{body: '5 + 5', test_id: tests[0].id},
                               {body: '8 + 4', test_id: tests[0].id},

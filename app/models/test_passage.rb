@@ -7,6 +7,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
   before_validation :before_validation_set_next_question, on: :update
+  before_validation :before_validation_set_timer, on: :create
 
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
@@ -44,6 +45,10 @@ class TestPassage < ApplicationRecord
 
   def before_validation_set_next_question
     self.current_question = next_question
+  end
+
+  def before_validation_set_timer
+    self.timer = test.time_limit
   end
 
   def correct_answer?(answer_ids)

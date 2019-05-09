@@ -15,6 +15,11 @@
   </p>
 
   <p>
+    <%= form.label 'Time limit (mm:ss)' %><br>
+    <%= form.text_field :time_limit%>
+  </p>
+
+  <p>
     <%= form.submit class: 'btn btn-primary' %>
   </p>
 <% end %>
