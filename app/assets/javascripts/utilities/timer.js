@@ -11,7 +11,7 @@ function timerInProgress(timerObject) {
   setInterval(function() {
     timer--;
 
-    if (timer === 0) {
+    if (timer <= 0) {
       alert('Time is out!');
       document.location.href += '/result';
     }
