@@ -1,30 +1,30 @@
-document.addEventListener('turbolinks:load', timerInProgress);
-
-function timerInProgress() {
+document.addEventListener('turbolinks:load', function() {
   var timerObject = document.getElementById('timer');
 
-  if (timerObject) {
-    setInterval(function() {
-      var timer = timerObject.dataset.testTimer;
-      timerObject.textContent = timer;
+  if (timerObject) { timerInProgress(timerObject) }
+});
 
-      if (timer === '00:00') {
-        alert('Time is out!');
-        document.location.href += '/result';
-      } else {
-        timeRuns(timer, timerObject);
-      }
+function timerInProgress(timerObject) {
+  var endTime = timerObject.dataset.endTime;
+  var timer = endTime - Math.trunc(Date.now() / 1000);
 
-    }, 1000);
-  }
+  setInterval(function() {
+    timer--;
+
+    if (timer === 0) {
+      alert('Time is out!');
+      document.location.href += '/result';
+    }
+
+    showTimer(timer, timerObject);
+  }, 1000);
 }
 
-function timeRuns(timer, timerObject) {
-  var arr = timer.split(':');
-  var minutes = arr[0];
-  var seconds = arr[1];
+function showTimer(timer, timerObject) {
+  var minutes = Math.trunc(timer / 60);
+  var seconds = timer % 60;
 
-  if (seconds === '00') {
+  if (seconds === 0) {
     minutes -= 1;
     minutes = minutes < 10 ? '0' + minutes : minutes;
     seconds = 59;
@@ -33,6 +33,6 @@ function timeRuns(timer, timerObject) {
     seconds = seconds < 10 ? '0' + seconds : seconds;
   }
 
-  timerObject.dataset.testTimer = minutes + ':' + seconds;
+  timerObject.textContent = minutes + ':' + seconds;
 }
 
