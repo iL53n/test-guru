@@ -7,7 +7,14 @@ class TestPassagesController < ApplicationController
   def result; end
 
   def update
-    @test_passage.accept!(params[:answer_ids])
+    @test_passage.accept!(params[:answer_ids]) # можно опустить после time_is_out? чтобы не засчитывать
+
+    if @test_passage.time_is_out?
+      flash[:alert] = 'Time is out!'
+      TestsMailer.completed_test(@test_passage).deliver_now
+      redirect_to result_test_passage_path(@test_passage)
+      return # чтобы выйти и не проверять completed?
+    end
 
     if @test_passage.completed?
       TestsMailer.completed_test(@test_passage).deliver_now

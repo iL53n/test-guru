@@ -1,0 +1,3 @@
+<%= content_tag :div, '',
+                id: 'timer',
+                data: { end_time: @test_passage.created_at.to_i + @test_passage.timer.to_i } %>
