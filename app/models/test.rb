@@ -11,6 +11,7 @@ class Test < ApplicationRecord
                                     only_integer: true }
 
   scope :tests_by_category, -> (category) { joins(:category).where(categories: { title: category }) }
+  scope :tests_by_level, -> (level) { joins(:level).where(levels: {title: level }) }
   scope :easy, -> { where(level: 0..1) }
   scope :middle, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY)}
