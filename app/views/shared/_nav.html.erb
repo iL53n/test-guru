@@ -1,12 +1,24 @@
 <nav class="navbar navbar-light bg-light">
-  <%= link_to  'TestGuru', root_path, class: 'navbar-brand' %>
+  <span class="navbar-brand" href="#">
+    <img src="https://sitejerk.com/images/weboptimized-transparent-png-16.png" width="33" height="35" alt="">
+    <%= link_to  'TestGuru', root_path, class: 'navbar-brand' %>
+  </span>
+
+  <li class="navbar-nav nav-item">
+    <a><%= link_to 'Gist', admin_gists_index_path, class: 'nav-link' %></a>
+  </li>
+  <li class="navbar-nav nav-item">
+    <a><%= link_to 'Badges', admin_badges_path, class: 'nav-link' %></a>
+  </li>
+  <li class="navbar-nav nav-item">
+    <a><%= link_to t('.feedback'), new_feedback_path, class: 'nav-link' %></a>
+  </li>
 
   <span class="navbar-text" >
     <% if user_signed_in? %>
       <small class="text-muted">
-      <%= link_to t('.feedback'), new_feedback_path %> |
-      <%= link_to t('.admin'), admin_tests_path if current_user.admin? %><br>
-      Welcome, <b><%= current_user.first_name %></b> Guru! |
+        <%= link_to t('.admin'), admin_tests_path if current_user.admin?  %><br>
+        Welcome, <b><%= current_user.first_name %></b> Guru!<br>
       </small>
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
