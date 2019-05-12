@@ -1,0 +1,5 @@
+<h1 class="display-4"><%= @badge.title %></h1>
+<p class="lead"><img src="<%= @badge.url_image %>" alt="badge_image"></p>
+<p class="lead">Rule: <%= @badge.rule %></p>
+
+<%= link_to 'Back', admin_badges_path, class: 'btn btn-primary' %>
