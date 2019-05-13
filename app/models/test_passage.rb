@@ -25,10 +25,6 @@ class TestPassage < ApplicationRecord
     percentage >= SUCCESS
   end
 
-  def passed?
-    completed? && success?
-  end
-
   def time_is_out?
     (Time.now - self.created_at) > test.time_limit if test.time_limit
   end
