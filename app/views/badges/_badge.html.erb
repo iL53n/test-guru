@@ -1,4 +1,8 @@
 <tr>
-  <td class="align-middle"><img src="<%= badge.url_image %>" alt="tut"></td>
+  <% if badge.url_image %>
+    <td class="align-middle col-md-3"><%= image_tag badge.url_image, size: "50x50", alt: "BadgeLogo" %></td>
+  <% else %>
+    <td>No image</td>
+  <% end %>
   <td class="align-middle"><%= badge.title %></td>
 </tr>

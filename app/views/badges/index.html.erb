@@ -2,6 +2,22 @@
 
 <%= render 'shared/errors', resource: @test %>
 
+<% if current_user.badges.present? %>
+  <h3> Your badges</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th> Image </th>
+      <th> Title </th>
+    </tr>
+    </thead>
+    <%= render current_user.badges %>
+  </table>
+<% else %>
+  <p class="alert alert-secondary">You don't have badges!</p>
+<% end %>
+
+<h3> Available to receive </h3>
 <table class="table table-striped">
   <thead>
   <tr>
