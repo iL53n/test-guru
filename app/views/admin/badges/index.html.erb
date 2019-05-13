@@ -1,4 +1,4 @@
-<h1 class="display-4"> Admin Badges </h1>
+<h1 class="display-4"><%= t('.admin_header') %> </h1>
 
 <%= render 'shared/errors', resource: @test %>
 <p>
@@ -9,10 +9,10 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <th> Image </th>
-    <th> Title </th>
-    <th> Rule </th>
-    <th> Rule param</th>
+    <th><%= t('.image') %></th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.rule') %></th>
+    <th><%= t('.rule_param') %></th>
     <th colspan="2"> Actions </th>
   </tr>
   </thead>

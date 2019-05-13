@@ -71,6 +71,21 @@ ru:
         question: 'Вопрос'
         url: 'Ссылка на Gist'
         user: 'Эл. почта пользователя'
+    badges:
+      badge:
+        no_image: "Нет картинки"
+      index:
+        admin_header: "Администрирование бейджей"
+        user_badges: "Ваши бейджи"
+        all_badges: "Все буйджи"
+        image: "Логотип"
+        title: "Название"
+        rule: "Правило"
+        rule_param: "Значение правила"
+      new:
+        title: "Создание нового бейджа"
+      edit:
+        title: "Изменить бейдж"
 
   test_passages:
     result:
@@ -97,7 +112,19 @@ ru:
       registration: "Регистрация"
       login: "Войти"
       admin: "Панель администратора"
+      gists: "Gists"
+      badges: "Бейджи"
     errors:
       header: "Обнаружены ошибки(%{count})"
+
+  badges:
+    badge:
+      no_image: "Нет картинки"
+    index:
+      header: "Бейджи"
+      user_badges: "Ваши бейджи"
+      all_badges: "Все бейджи"
+      image: "Логотип"
+      title: "Название"
 
   description: "Вопрос из теста %{title} приложения TestGuru"

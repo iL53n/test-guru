@@ -1,8 +1,8 @@
 <tr>
-  <% if badge.url_image %>
+  <% if badge.url_image.present? %>
     <td class="align-middle col-md-3"><%= image_tag badge.url_image, size: "50x50", alt: "BadgeLogo" %></td>
   <% else %>
-    <td>No image</td>
+    <td><%= t('.no_image') %></td>
   <% end %>
   <td class="align-middle"><%= badge.title %></td>
 </tr>
