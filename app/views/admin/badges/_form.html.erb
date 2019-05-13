@@ -1,0 +1,25 @@
+<%= form_with model: [:admin, @badge], local:true do |form| %>
+  <p>
+    <%= form.label :url_image %><br>
+    <%= form.text_field :url_image %>
+  </p>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :rule %><br>
+    <%= form.select :rule, options_for_select(Badge::RULES), class: 'form-control'%>
+  </p>
+
+  <p>
+    <%= form.label :rule_param %><br>
+    <%= form.text_field :rule_param %>
+  </p>
+
+  <p>
+    <%= form.submit class: 'btn btn-primary' %>
+  </p>
+<% end %>

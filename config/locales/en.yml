@@ -69,6 +69,21 @@ en:
         question: 'Question'
         url: 'Gist url'
         user: 'User email'
+    badges:
+      badge:
+        no_image: "No image"
+      index:
+        admin_header: "Admin badges"
+        user_badges: "Your badges"
+        all_badges: "All badges"
+        image: "Image"
+        title: "Title"
+        rule: "Rule"
+        rule_param: "Rule param"
+      new:
+        title: "Create new badge"
+      edit:
+        title: "Edit badge"
 
   test_passages:
     result:
@@ -94,8 +109,20 @@ en:
       registration: "Registration"
       login: "LogIn"
       admin: "AdminPanel"
+      gists: "Gists"
+      badges: "Badges"
     errors:
       header: "Errors detected(%{count})"
+
+  badges:
+    badge:
+      no_image: "No image"
+    index:
+      header: "Badges"
+      user_badges: "Your badges"
+      all_badges: "All badges"
+      image: "Image"
+      title: "Title"
 
 
   description: "A question about %{title} from TestGuru"

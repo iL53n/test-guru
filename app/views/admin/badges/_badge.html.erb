@@ -1,0 +1,15 @@
+<tr>
+  <% if badge.url_image.present? %>
+    <td class="align-middle col-md-3"><%= image_tag badge.url_image, size: "50x50", alt: "BadgeLogo" %></td>
+  <% else %>
+    <td>No image</td>
+  <% end %>
+  <td class="align-middle"><%= badge.title %></td>
+  <td class="align-middle"><%= badge.rule %></td>
+  <td class="align-middle"><%= badge.rule_param%></td>
+  <td class="align-middle"><%= link_to 'Edit', edit_admin_badge_path(badge), class: 'btn btn-outline-primary' %></td>
+  <td class="align-middle"><%= link_to 'Delete',
+                                       admin_badge_path(badge), class: 'btn btn-outline-primary',
+                                       method: :delete,
+                                       data: {confirm: 'Are you sure?'} %></td>
+</tr>

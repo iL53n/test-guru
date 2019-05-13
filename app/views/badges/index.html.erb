@@ -1,0 +1,29 @@
+<h1 class="display-4"><%= t('.header') %></h1>
+
+<%= render 'shared/errors', resource: @test %>
+
+<% if current_user.badges.present? %>
+  <h3><%= t('.user_badges') %></h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th><%= t('.image') %></th>
+      <th><%= t('.title') %></th>
+    </tr>
+    </thead>
+    <%= render current_user.badges %>
+  </table>
+<% else %>
+  <p class="alert alert-secondary">You don't have badges!</p>
+<% end %>
+
+<h3><%= t('.all_badges') %></h3>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= t('.image') %></th>
+    <th><%= t('.title') %></th>
+  </tr>
+  </thead>
+  <%= render @badges %>
+</table>

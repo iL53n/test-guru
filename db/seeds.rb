@@ -10,9 +10,9 @@
 categories = Category.create([{title: 'mathematics'},
                               {title: 'literature'}])
 
-tests = Test.create([{title: 'Plus', level: 1, category_id: categories[0].id, time_limit: 15},
-                     {title: 'Minus', level: 2, category_id: categories[0].id, time_limit: 10},
-                     {title: 'NoQuestionsTest', level: 1, category_id: categories[0].id}], time_limit: 10)
+tests = Test.create([{title: 'Plus', level: 1, category_id: categories[0].id, time_limit: 360},
+                     {title: 'Minus', level: 2, category_id: categories[0].id, time_limit: 360},
+                     {title: 'NoQuestionsTest', level: 3, category_id: categories[1].id, time_limit: 360}])
 
 questions1 = Question.create([{body: '5 + 5', test_id: tests[0].id},
                               {body: '8 + 4', test_id: tests[0].id},
@@ -41,3 +41,9 @@ answers22 = Answer.create([{body: '3', question_id: questions2[1].id},
 answers23 = Answer.create([{body: '5', correct: true, question_id: questions2[2].id},
                            {body: '15', question_id: questions2[2].id},
                            {body: '8', question_id: questions2[2].id}])
+
+badges = Badge.create([{ title: 'complete successfully mathematics test', rule: 'category_complete'},
+                       { title: 'complete successfully literature test', rule: 'category_complete'},
+                       { title: 'complete successfully for the first try', rule: 'first_attempt_complete'},
+                       { title: 'complete successfully the 1-st level(MEDIUM) test', rule: 'level_complete'},
+                       { title: 'complete successfully the 2-nd level(ADVENCED) test', rule: 'level_complete'},])

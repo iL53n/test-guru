@@ -1,12 +1,34 @@
 <nav class="navbar navbar-light bg-light">
-  <%= link_to  'TestGuru', root_path, class: 'navbar-brand' %>
+  <span class="navbar-brand" href="#">
+    <%= image_tag 'ruby_logo.png', size: "33x35", alt: "RubyLogo" %>
+    <%= link_to  'TestGuru', root_path, class: 'navbar-brand' %>
+  </span>
+
+  <% if user_signed_in?%>
+    <% if current_user.admin? %>
+      <li class="navbar-nav nav-item">
+        <a><%= link_to t('.admin'), admin_tests_path, class: 'nav-link' %></a>
+      </li>
+      <li class="navbar-nav nav-item">
+        <a><%= link_to t('.gists'), admin_gists_index_path, class: 'nav-link' %></a>
+      </li>
+      <li class="navbar-nav nav-item">
+        <a><%= link_to t('.badges'), admin_badges_path, class: 'nav-link' %></a>
+      </li>
+    <% else %>
+      <li class="navbar-nav nav-item">
+        <a><%= link_to t('.badges'), badges_path, class: 'nav-link' %></a>
+      </li>
+      <li class="navbar-nav nav-item">
+        <a><%= link_to t('.feedback'), new_feedback_path, class: 'nav-link' %></a>
+      </li>
+    <% end %>
+  <% end %>
 
   <span class="navbar-text" >
     <% if user_signed_in? %>
       <small class="text-muted">
-      <%= link_to t('.feedback'), new_feedback_path %> |
-      <%= link_to t('.admin'), admin_tests_path if current_user.admin? %><br>
-      Welcome, <b><%= current_user.first_name %></b> Guru! |
+        Welcome, <b><%= current_user.first_name %></b> Guru!<br>
       </small>
       <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
