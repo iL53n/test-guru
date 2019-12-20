@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Auth
-gem 'devise', '~> 4.0'
+gem 'devise', '~> 4.7'
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Networking
